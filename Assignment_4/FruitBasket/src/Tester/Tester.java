@@ -57,12 +57,15 @@ public class Tester {
 				break;
 			case 4:
 				System.out.println("Fruits in the basket are : ");
+				if(counter!=0) {
 				for (Fruit fruit : basket) {
 					if (fruit != null)
 						System.out.print(fruit.getName() + "		");
-					else
-						System.out.print("Basket is Empty");
+					
 				}
+				}
+				else
+					System.out.print("Basket is Empty");
 				System.out.println();
 
 				break;
