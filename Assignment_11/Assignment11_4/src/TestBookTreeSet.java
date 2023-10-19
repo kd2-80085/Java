@@ -1,16 +1,7 @@
-/*3. In above assignment use TreeSet instead of LinkedHashSet. Use natural ordering for the Book. If any book with duplicate isbn is added, what will happen?
-Books are stored in which order?
- */
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.NavigableMap;
-import java.util.NavigableSet;
-import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
+/*4. Use TreeSet to store all books in descending order of price.
+ Natural ordering for the Book should be isbn (do not change it).
+  Display them using iterator() and descendingIterator().*/
+import java.util.*;
 
 import storebook.StoreBook;
 class qtycomp implements Comparator<StoreBook>{

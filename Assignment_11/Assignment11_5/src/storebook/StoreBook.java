@@ -1,6 +1,4 @@
 package storebook;
-
-
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -73,30 +71,5 @@ public class StoreBook{
 	public String toString() {
 		return "StoreBook : [isbn=" + isbn + ", price=" + price + ", authorName=" + authorName + ", quantity=" + quantity
 				+ "]";
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if(obj == null)
-			return false;
-		if(this == obj)
-			return true;
-		if(obj instanceof StoreBook) {
-			StoreBook other = (StoreBook) obj;
-			if(this.isbn.equals(other.isbn))
-				return true;
-		}
-		return false;
-	}
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

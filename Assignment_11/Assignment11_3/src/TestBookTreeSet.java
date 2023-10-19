@@ -1,5 +1,10 @@
-/*3. In above assignment use TreeSet instead of LinkedHashSet. Use natural ordering for the Book. If any book with duplicate isbn is added, what will happen?
+/*3. In above assignment use TreeSet instead of LinkedHashSet.
+Use natural ordering for the Book. If any book with duplicate isbn is added,
+ what will happen?
 Books are stored in which order?
+->
+Book with duplicate isbn will not added
+Books are stored based on isbn
  */
 import java.util.Collections;
 import java.util.Comparator;
@@ -15,9 +20,8 @@ class qtycomp implements Comparator<StoreBook>{
 
 	@Override
 	public int compare(StoreBook o1, StoreBook o2) {
-		int diff=o1.getQuantity()-(o2.getQuantity());
 		int diff1=Integer.compare(o1.getQuantity(),o2.getQuantity());
-		return diff;
+		return diff1;
 	}
 	
 }
@@ -71,18 +75,16 @@ public class TestBookTreeSet {
 		treeset2.add(sb3);
 		treeset2.add(sb4);
 		
-		Iterator<StoreBook> sbit2=treeset.iterator();
+		Iterator<StoreBook> sbit2=treeset2.iterator();
 		System.out.println("Using comparator on quantity");
 		while(sbit2.hasNext())
 		{
 			StoreBook sbtemp2=sbit2.next();
 			System.out.println(sbtemp2);
 		}
-		/*it will sort based on comparator compare and stored elemets.
-		 * StoreBook : [isbn=13, price=202.0, authorName=Akshay Bhavar, quantity=12]
-		StoreBook : [isbn=15, price=150.0, authorName=Akash, quantity=10]
-		StoreBook : [isbn=16, price=200.0, authorName=Chaitanya Bhavar, quantity=10]
-
+		/*it will sort based on comparator compare and stores elemets.
+		 * StoreBook : [isbn=16, price=200.0, authorName=Chaitanya Bhavar, quantity=10]
+			StoreBook : [isbn=13, price=202.0, authorName=Akshay Bhavar, quantity=12]
 		 * */
 		
 		}
